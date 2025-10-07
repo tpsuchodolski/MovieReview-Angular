@@ -25,6 +25,9 @@ jobs:
     - name: Build solution
       run: msbuild MovieReview.Web/MovieReview.Web.csproj /p:Configuration=Release
 
+    - name: Clean publish directory
+      run: if exist publish rmdir /s /q publish
+
     - name: Create publish directory
       run: mkdir publish
 
@@ -33,11 +36,12 @@ jobs:
         echo obj\ > exclude.txt
         echo bin\Debug\ >> exclude.txt
         echo publish\ >> exclude.txt
+        echo packages\ >> exclude.txt
 
-    - name: Copy web content files
+    - name: Copy web content files (excluding unwanted folders)
       run: xcopy MovieReview.Web\* publish\ /s /y /exclude:exclude.txt
 
-    - name: Copy build output
+    - name: Copy build output (DLLs and dependencies)
       run: xcopy MovieReview.Web\bin\* publish\bin\ /s /y
 
     - name: List bin directory
