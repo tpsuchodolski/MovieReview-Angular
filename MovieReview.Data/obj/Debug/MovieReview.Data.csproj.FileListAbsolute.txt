@@ -1,0 +1,16 @@
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data\bin\Debug\MovieReview.Data.dll.config
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data\bin\Debug\MovieReview.Data.dll
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data\bin\Debug\MovieReview.Data.pdb
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data\bin\Debug\EntityFramework.dll
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data\bin\Debug\MovieReview.Data.Contracts.dll
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data\bin\Debug\MovieReview.Model.dll
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data\bin\Debug\MovieReview.Data.Contracts.pdb
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data\bin\Debug\MovieReview.Model.pdb
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data\bin\Debug\EntityFramework.xml
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data\obj\Debug\MovieReview.Data.csproj.AssemblyReference.cache
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data\obj\Debug\MovieReview.Data.csproj.CoreCompileInputs.cache
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data\obj\Debug\MovieRev.28FEE702.Up2Date
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data\obj\Debug\MovieReview.Data.dll
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data\obj\Debug\MovieReview.Data.pdb

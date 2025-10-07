@@ -1,0 +1,9 @@
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data.Contracts\bin\Debug\MovieReview.Data.Contracts.dll
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data.Contracts\bin\Debug\MovieReview.Data.Contracts.pdb
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data.Contracts\bin\Debug\MovieReview.Model.dll
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data.Contracts\bin\Debug\MovieReview.Model.pdb
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data.Contracts\obj\Debug\MovieReview.Data.Contracts.csproj.AssemblyReference.cache
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data.Contracts\obj\Debug\MovieReview.Data.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data.Contracts\obj\Debug\MovieRev.DA7206A7.Up2Date
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data.Contracts\obj\Debug\MovieReview.Data.Contracts.dll
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Data.Contracts\obj\Debug\MovieReview.Data.Contracts.pdb

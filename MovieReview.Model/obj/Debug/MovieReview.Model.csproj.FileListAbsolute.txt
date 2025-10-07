@@ -1,0 +1,6 @@
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Model\bin\Debug\MovieReview.Model.dll
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Model\bin\Debug\MovieReview.Model.pdb
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Model\obj\Debug\MovieReview.Model.csproj.AssemblyReference.cache
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Model\obj\Debug\MovieReview.Model.csproj.CoreCompileInputs.cache
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Model\obj\Debug\MovieReview.Model.dll
+C:\Users\Tim\Source\Repos\MovieReview-Angular\MovieReview.Model\obj\Debug\MovieReview.Model.pdb
