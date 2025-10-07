@@ -90,9 +90,6 @@ jobs:
         echo *.tar >> exclude.txt
         echo *.rar >> exclude.txt
 
-    - name: Copy web content files (excluding unwanted folders)
-      run: xcopy MovieReview.Web\* publish\ /s /y /exclude:exclude.txt
-
     - name: Copy Views
       run: xcopy MovieReview.Web\Views publish\Views\ /s /y
 
