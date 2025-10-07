@@ -39,10 +39,13 @@ jobs:
       run: xcopy MovieReview.Web\* publish\ /s /y /exclude:exclude.txt
 
     - name: Copy build output
-      run: xcopy MovieReview.Web\bin\Release\* publish\bin\ /s /y
+      run: xcopy MovieReview.Web\bin\* publish\bin\ /s /y
 
     - name: List build output
       run: dir MovieReview.Web\bin\Release
+
+    - name: List bin directory
+      run: dir MovieReview.Web\bin
 
     - name: Build Docker image
       run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/moviereview:latest .
