@@ -36,11 +36,23 @@ jobs:
       run: |
         echo obj\ > exclude.txt
         echo bin\Debug\ >> exclude.txt
+        echo bin\Release\ >> exclude.txt
         echo publish\ >> exclude.txt
         echo packages\ >> exclude.txt
         echo .vs\ >> exclude.txt
         echo node_modules\ >> exclude.txt
         echo TestResults\ >> exclude.txt
+        echo .git\ >> exclude.txt
+        echo .gitignore >> exclude.txt
+        echo *.user >> exclude.txt
+        echo *.suo >> exclude.txt
+        echo *.pdb >> exclude.txt
+        echo *.md >> exclude.txt
+        echo *.ps1 >> exclude.txt
+        echo *.bat >> exclude.txt
+        echo *.log >> exclude.txt
+        echo *.cache >> exclude.txt
+        echo *.tmp >> exclude.txt
 
     - name: Copy web content files (excluding unwanted folders)
       run: xcopy MovieReview.Web\* publish\ /s /y /exclude:exclude.txt
