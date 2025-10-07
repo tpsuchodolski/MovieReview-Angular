@@ -25,6 +25,9 @@ jobs:
     - name: Build solution
       run: msbuild MovieReview.Web/MovieReview.Web.csproj /p:Configuration=Release /p:WebProjectOutputDir=MovieReview.Web/publish
 
+    - name: Move publish folder to root
+      run: Move-Item -Path MovieReview.Web\publish -Destination ./publish
+
     - name: Build Docker image
       run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/moviereview:latest .
 

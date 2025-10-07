@@ -5,7 +5,7 @@ FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8-windowsservercore-ltsc2019
 WORKDIR /inetpub/wwwroot
 
 # Copy published files from the build output
-COPY MovieReview.Web/publish/ .
+COPY publish/ .
 
 # Expose port 80
 EXPOSE 80
