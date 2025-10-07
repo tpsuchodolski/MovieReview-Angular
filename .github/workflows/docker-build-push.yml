@@ -23,12 +23,7 @@ jobs:
       uses: microsoft/setup-msbuild@v1.3
 
     - name: Build solution
-      run: msbuild MovieReview.Web/MovieReview.Web.csproj /p:Configuration=Release
-
-    - name: Copy build output
-      run: |
-        mkdir MovieReview.Web/publish
-        xcopy MovieReview.Web\bin\Release\* MovieReview.Web\publish\ /s /y
+      run: msbuild MovieReview.Web/MovieReview.Web.csproj /p:Configuration=Release /p:WebProjectOutputDir=MovieReview.Web/publish
 
     - name: Build Docker image
       run: docker build -t <your-dockerhub-username>/moviereview:latest .
