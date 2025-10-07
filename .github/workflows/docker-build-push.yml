@@ -28,15 +28,15 @@ jobs:
     - name: Create publish directory
       run: mkdir publish
 
-    - name: Copy web project files to publish directory
-      run: xcopy MovieReview.Web\* publish\ /s /y /exclude:exclude.txt
-
     - name: Create exclude file
       run: |
         echo obj\ > exclude.txt
         echo bin\Debug\ >> exclude.txt
         echo bin\Release\ >> exclude.txt
         echo publish\ >> exclude.txt
+
+    - name: Copy web project files to publish directory
+      run: xcopy MovieReview.Web\* publish\ /s /y /exclude:exclude.txt
 
     - name: Build Docker image
       run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/moviereview:latest .
