@@ -32,7 +32,6 @@ jobs:
       run: |
         echo obj\ > exclude.txt
         echo bin\Debug\ >> exclude.txt
-        echo bin\Release\ >> exclude.txt
         echo publish\ >> exclude.txt
 
     - name: Copy web content files
@@ -40,9 +39,6 @@ jobs:
 
     - name: Copy build output
       run: xcopy MovieReview.Web\bin\* publish\bin\ /s /y
-
-    - name: List build output
-      run: dir MovieReview.Web\bin\Release
 
     - name: List bin directory
       run: dir MovieReview.Web\bin
