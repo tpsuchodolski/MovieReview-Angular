@@ -1,0 +1,38 @@
+name: Build, Containerize, and Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup NuGet
+      uses: nuget/setup-nuget@v1
+
+    - name: Restore NuGet packages
+      run: nuget restore MovieReview.Web/MovieReview.Web.csproj
+
+    - name: Build solution
+      run: msbuild MovieReview.Web/MovieReview.Web.csproj /p:Configuration=Release
+
+    - name: Publish web project
+      run: msbuild MovieReview.Web/MovieReview.Web.csproj /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile /p:PublishDir=MovieReview.Web/publish/
+
+    - name: Build Docker image
+      run: docker build -t <your-dockerhub-username>/moviereview:latest .
+
+    - name: Login to DockerHub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Push Docker image
+      run: docker push <your-dockerhub-username>/moviereview:latest
