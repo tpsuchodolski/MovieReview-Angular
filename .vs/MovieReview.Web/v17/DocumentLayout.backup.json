@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.github\\workflows\\docker-build-push.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC77B5A9-82DD-47FA-AE23-27B466D1B0D9}|MovieReview.Web\\MovieReview.Web.csproj|c:\\users\\tim\\source\\repos\\moviereview-angular\\moviereview.web\\properties\\publishprofiles\\folderprofile.pubxml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{EC77B5A9-82DD-47FA-AE23-27B466D1B0D9}|MovieReview.Web\\MovieReview.Web.csproj|C:\\Users\\Tim\\source\\repos\\MovieReview-Angular\\moviereview.web\\properties\\publishprofiles\\folderprofile.pubxml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{EC77B5A9-82DD-47FA-AE23-27B466D1B0D9}|MovieReview.Web\\MovieReview.Web.csproj|solutionrelative:moviereview.web\\properties\\publishprofiles\\folderprofile.pubxml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC77B5A9-82DD-47FA-AE23-27B466D1B0D9}|MovieReview.Web\\MovieReview.Web.csproj|c:\\users\\tim\\source\\repos\\moviereview-angular\\moviereview.web\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{EC77B5A9-82DD-47FA-AE23-27B466D1B0D9}|MovieReview.Web\\MovieReview.Web.csproj|solutionrelative:moviereview.web\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tim\\source\\repos\\MovieReview-Angular\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC77B5A9-82DD-47FA-AE23-27B466D1B0D9}|MovieReview.Web\\MovieReview.Web.csproj|C:\\Users\\Tim\\source\\repos\\MovieReview-Angular\\moviereview.web\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{EC77B5A9-82DD-47FA-AE23-27B466D1B0D9}|MovieReview.Web\\MovieReview.Web.csproj|solutionrelative:moviereview.web\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,14 +49,14 @@
               "RelativeDocumentMoniker": ".github\\workflows\\docker-build-push.yml",
               "ToolTip": "C:\\Users\\Tim\\source\\repos\\MovieReview-Angular\\.github\\workflows\\docker-build-push.yml",
               "RelativeToolTip": ".github\\workflows\\docker-build-push.yml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2025-10-07T19:14:17.403Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\Tim\\source\\repos\\MovieReview-Angular\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
@@ -69,7 +69,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\Tim\\source\\repos\\MovieReview-Angular\\MovieReview.Web\\Web.config",
               "RelativeDocumentMoniker": "MovieReview.Web\\Web.config",

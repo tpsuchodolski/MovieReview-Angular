@@ -35,8 +35,11 @@ jobs:
         echo bin\Release\ >> exclude.txt
         echo publish\ >> exclude.txt
 
-    - name: Copy web project files to publish directory
+    - name: Copy web content files
       run: xcopy MovieReview.Web\* publish\ /s /y /exclude:exclude.txt
+
+    - name: Copy build output
+      run: xcopy MovieReview.Web\bin\Release\* publish\bin\ /s /y
 
     - name: Build Docker image
       run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/moviereview:latest .
