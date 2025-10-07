@@ -23,10 +23,13 @@ jobs:
       uses: microsoft/setup-msbuild@v1.3
 
     - name: Build solution
-      run: msbuild MovieReview.Web/MovieReview.Web.csproj /p:Configuration=Release /p:WebProjectOutputDir=MovieReview.Web/publish
+      run: msbuild MovieReview.Web/MovieReview.Web.csproj /p:Configuration=Release
 
-    - name: Move publish folder to root
-      run: Move-Item -Path MovieReview.Web\publish -Destination ./publish
+    - name: Create publish directory
+      run: mkdir publish
+
+    - name: Copy web project files to publish directory
+      run: xcopy MovieReview.Web\* publish\ /s /y /exclude:MovieReview.Web\obj\;MovieReview.Web\bin\Debug\;MovieReview.Web\bin\Release\;publish\,
 
     - name: Build Docker image
       run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/moviereview:latest .
