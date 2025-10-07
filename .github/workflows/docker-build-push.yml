@@ -3,7 +3,7 @@ name: Build, Containerize, and Push
 on:
   push:
     branches:
-      - main
+      - Movie-Review-Angular
 
 jobs:
   build-and-push:
