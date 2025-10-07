@@ -19,6 +19,9 @@ jobs:
     - name: Restore NuGet packages
       run: nuget restore MovieReview.Web/MovieReview.Web.csproj -SolutionDirectory MovieReview.Web
 
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.3
+
     - name: Build solution
       run: msbuild MovieReview.Web/MovieReview.Web.csproj /p:Configuration=Release
 
