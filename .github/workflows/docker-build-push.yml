@@ -35,8 +35,7 @@ jobs:
     - name: Create exclude file
       run: |
         echo obj\ > exclude.txt
-        echo bin\Debug\ >> exclude.txt
-        echo bin\Release\ >> exclude.txt
+        echo bin\ > exclude.txt
         echo publish\ >> exclude.txt
         echo packages\ >> exclude.txt
         echo .vs\ >> exclude.txt
@@ -44,20 +43,69 @@ jobs:
         echo TestResults\ >> exclude.txt
         echo .git\ >> exclude.txt
         echo .gitignore >> exclude.txt
-        echo *.user >> exclude.txt
-        echo *.suo >> exclude.txt
-        echo *.pdb >> exclude.txt
+        echo .vscode\ >> exclude.txt
+        echo .idea\ >> exclude.txt
+        echo test\ >> exclude.txt
+        echo tests\ >> exclude.txt
+        echo docs\ >> exclude.txt
+        echo samples\ >> exclude.txt
+        echo artifacts\ >> exclude.txt
+        echo App_Data\ >> exclude.txt
+        echo App_Start\ >> exclude.txt
+        echo Properties\ >> exclude.txt
+        echo *.config >> exclude.txt
+        echo *.csproj >> exclude.txt
+        echo *.sln >> exclude.txt
+        echo *.db >> exclude.txt
+        echo *.bak >> exclude.txt
         echo *.md >> exclude.txt
-        echo *.ps1 >> exclude.txt
-        echo *.bat >> exclude.txt
-        echo *.log >> exclude.txt
+        echo *.json >> exclude.txt
+        echo *.ts >> exclude.txt
+        echo *.map >> exclude.txt
+        echo *.xml >> exclude.txt
+        echo *.yml >> exclude.txt
+        echo *.yaml >> exclude.txt
+        echo *.sh >> exclude.txt
+        echo *.cmd >> exclude.txt
+        echo *.nupkg >> exclude.txt
+        echo *.vspscc >> exclude.txt
         echo *.cache >> exclude.txt
         echo *.tmp >> exclude.txt
+        echo *.log >> exclude.txt
+        echo *.dbmdl >> exclude.txt
+        echo *.user >> exclude.txt
+        echo *.suo >> exclude.txt
+        echo *.vssscc >> exclude.txt
+        echo *.tlog >> exclude.txt
+        echo *.idb >> exclude.txt
+        echo *.ipch >> exclude.txt
+        echo *.sdf >> exclude.txt
+        echo *.opensdf >> exclude.txt
+        echo *.swp >> exclude.txt
+        echo *.swo >> exclude.txt
+        echo *.orig >> exclude.txt
+        echo *.rej >> exclude.txt
+        echo *.gz >> exclude.txt
+        echo *.zip >> exclude.txt
+        echo *.tar >> exclude.txt
+        echo *.rar >> exclude.txt
 
     - name: Copy web content files (excluding unwanted folders)
       run: xcopy MovieReview.Web\* publish\ /s /y /exclude:exclude.txt
 
-    - name: Copy build output (DLLs and dependencies)
+    - name: Copy Views
+      run: xcopy MovieReview.Web\Views publish\Views\ /s /y
+
+    - name: Copy Content
+      run: xcopy MovieReview.Web\Content publish\Content\ /s /y
+
+    - name: Copy Scripts
+      run: xcopy MovieReview.Web\Scripts publish\Scripts\ /s /y
+
+    - name: Copy Web.config
+      run: copy MovieReview.Web\Web.config publish\
+
+    - name: Copy bin
       run: xcopy MovieReview.Web\bin\* publish\bin\ /s /y
 
     - name: List bin directory
