@@ -26,7 +26,7 @@ jobs:
       run: msbuild MovieReview.Web/MovieReview.Web.csproj /p:Configuration=Release
 
     - name: Publish web project
-      run: msbuild MovieReview.Web/MovieReview.Web.csproj /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile /p:PublishDir=MovieReview.Web/publish/
+      run: msbuild MovieReview.Web/MovieReview.Web.csproj /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile /p:PublishDir=MovieReview.Web/publish/ /p:WebPublishMethod=FileSystem
 
     - name: Build Docker image
       run: docker build -t <your-dockerhub-username>/moviereview:latest .
