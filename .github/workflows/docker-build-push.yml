@@ -26,7 +26,8 @@ jobs:
       run: msbuild MovieReview.Web/MovieReview.Web.csproj /p:Configuration=Release
 
     - name: Clean publish directory
-      run: if exist publish rmdir /s /q publish
+      run: |
+        if (Test-Path publish) { Remove-Item publish -Recurse -Force }
 
     - name: Create publish directory
       run: mkdir publish
