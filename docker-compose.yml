@@ -14,7 +14,7 @@ services:
       ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=MovieReview;User Id=sa;Password=Your_password123;"
 
   sqlserver:
-    image: mcr.microsoft.com/mssql/server:2019-latest-windowsservercore-ltsc2019
+    image: mcr.microsoft.com/mssql/server:2019-windowsservercore-ltsc2019
     environment:
       ACCEPT_EULA: "Y"
       SA_PASSWORD: "Your_password123"
