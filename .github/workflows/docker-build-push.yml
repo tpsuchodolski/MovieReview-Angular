@@ -91,7 +91,7 @@ jobs:
         echo *.rar >> exclude.txt
 
     - name: Broad copy to publish directory
-      run: xcopy MovieReview.Web\* publish\ /s /y /exclude:exclude.txt
+      run: xcopy MovieReview.Web\* publish\ /s /y
 
     - name: List bin directory
       run: dir MovieReview.Web\bin
