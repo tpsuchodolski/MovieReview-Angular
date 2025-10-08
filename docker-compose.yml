@@ -1,0 +1,34 @@
+version: '3.4'
+
+services:
+  moviereview-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - sqlserver
+    environment:
+      # Update your Web.config connection string to match this
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=MovieReview;User Id=sa;Password=Your_password123;"
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Your_password123"
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./db-init:/db-init
+    command: >
+      bash -c "
+        /opt/mssql/bin/sqlservr & 
+        sleep 20 && 
+        /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Your_password123 -d master -i /db-init/init.sql
+      "
+
+volumes:
+  sqlserverdata:
