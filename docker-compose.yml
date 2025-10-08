@@ -14,8 +14,7 @@ services:
       ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=MovieReview;User Id=sa;Password=Your_password123;"
 
   sqlserver:
-    image: mcr.microsoft.com/mssql/server:2019-latest
-    container_name: sqlserver
+    image: mcr.microsoft.com/mssql/server:2019-latest-windowsservercore-ltsc2019
     environment:
       ACCEPT_EULA: "Y"
       SA_PASSWORD: "Your_password123"
@@ -24,10 +23,10 @@ services:
     volumes:
       - ./db-init:/db-init
     command: >
-      bash -c "
-        /opt/mssql/bin/sqlservr & 
-        sleep 20 && 
-        /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Your_password123 -d master -i /db-init/init.sql
+      powershell -Command "
+        Start-Process -NoNewWindow -FilePath 'sqlservr.exe';
+        Start-Sleep -Seconds 20;
+        sqlcmd -S localhost -U sa -P Your_password123 -d master -i C:\db-init\init.sql
       "
 
 volumes:
